@@ -1,0 +1,22 @@
+<%- include("index")  -%>
+
+    <div class="box" id="heading">
+        <h1><%= listTitle %></h1>
+    </div>
+    <div class="box">
+        <% for(let i=0; i<kinds.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= kinds[i] %></p>
+            </div>
+           
+     <%   } %>
+
+    <form action="/" method="post">
+    
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button name="list" value=<%= listTitle %>>+</button>
+</form>
+</div>
+</body>
+</html>
